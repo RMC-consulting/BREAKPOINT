@@ -1,0 +1,13 @@
+{
+  "name": "rmc-breaking-point",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Landing de RMC Breaking Point con edición de textos y subida de imágenes y video.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: rmc-breaking-point
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/session
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: MAX_UPLOAD_MB
+        value: "50"
+    disk:
+      name: rmc-data
+      mountPath: /var/data
+      sizeGB: 1
